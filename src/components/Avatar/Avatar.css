@@ -1,0 +1,6 @@
+.Avatar {
+  border-radius: 100%;
+  perspective: 1px;
+  border: 1px solid white;
+  width: 100%;
+}

@@ -1,0 +1,19 @@
+.Question {
+  margin: 1em auto;
+  margin-bottom: 0;
+  width: 32em;
+  color: white;
+}
+
+.question-block {
+  border-radius: .5em;
+  background-color: rgb(15, 15, 15);
+  border: 1px solid rgba(169, 169, 169, 0.25);
+  margin-bottom: 2em;
+}
+
+.would-you-rather-lg {
+  margin-top: 1em;
+  font-family: Twilight;
+  text-align: center;
+}

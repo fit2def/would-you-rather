@@ -1,0 +1,14 @@
+.mini-avatar-block {
+  display: inline-block;
+  width: 3em;
+}
+
+.user-name {
+  margin-right: 1em;
+  width: 9em;
+}
+
+.UserInfo {
+  text-align: right;
+  width: 12em;
+}

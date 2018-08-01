@@ -1,0 +1,9 @@
+.NewQuestion {
+  width: 32em;
+  margin: 1em auto;
+  margin-bottom: 0;
+  color: white;
+  background-color: rgb(15, 15, 15);
+  border: 1px solid rgba(169, 169, 169, 0.25);
+  border-radius: .5em;
+}

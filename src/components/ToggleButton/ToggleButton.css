@@ -1,0 +1,9 @@
+.toggled-on {
+  background-color: rgb(36, 36, 36);
+  cursor: default !important;
+  font-weight: bold;
+}
+
+.toggled-off {
+  background-color: rgba(15, 15, 15, .70);
+}

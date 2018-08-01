@@ -1,0 +1,35 @@
+.active-link {
+  border-bottom: 1px solid rgb(255, 255, 87);
+  padding-bottom: .25em;
+  color: rgb(255, 255, 87) !important;
+}
+
+.active-link:hover {
+  border-bottom: 1px solid rgb(113, 68, 134);
+  color: rgb(113, 68, 134) !important;
+}
+
+nav {
+  background-color: rgba(15, 15, 15, 0.70);
+  border: 1px solid rgba(169, 169, 169, 0.25);
+  color: white;
+  min-height: 4.5em;
+  padding: 0 !important;
+}
+
+nav ul {
+  margin-left: 2em;
+}
+
+.nav-item {
+  margin: .5em 2em 0 .5em;
+}
+
+.non-active-link:hover {
+  color: rgb(113, 68, 134) !important;
+}
+
+.nav-item a {
+  color: white;
+  text-decoration: none;
+}

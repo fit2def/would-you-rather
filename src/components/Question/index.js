@@ -10,22 +10,12 @@ import './Question.css';
 class Question extends Component {
 
   componentDidMount() {
-    this.noAuth() || this.badQuestion();
+    this.checkForBadQuestion();
   }
 
-  noAuth() {
-    const { authedUser, history } = this.props;
-    if (!authedUser) {
-      history.push('/login');
-      return true;
-    }
-  }
-
-  badQuestion() {
+  checkForBadQuestion() {
     const { question, history } = this.props;
-    if (!question) {
-      history.push('/error');
-    }
+    !question && history.push('/error');
   }
 
   vote(option) {
@@ -39,7 +29,7 @@ class Question extends Component {
     if (!users || !question)
       return null;
 
-    const [ leftMetrics, rightMetrics ] = getAnswerMetrics(authedUser, question)
+    const [ leftMetrics, rightMetrics ] = getAnswerMetrics(authedUser, question);
 
     return (
       <div className='Question'>

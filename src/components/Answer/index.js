@@ -19,14 +19,14 @@ function Answer({ metrics, text, vote, customStyles}) {
 
       {!canVote &&
         <div>
-          <p>{ratio}</p>
-          <p>{percentage}%</p>
+          <span>{ratio}</span>
+          <span>{percentage}%</span>
         </div> }
 
       {didVote && <p>***YOUR ANSWER***</p>}
 
     </div>
-  )
+  );
 }
 
 export default Answer;

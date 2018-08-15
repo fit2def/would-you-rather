@@ -7,5 +7,5 @@ export default function Avatar({ user }) {
       className='Avatar'
       src={user.avatarURL}
       alt={`${user.name}'s avatar`} />
-  )
+  );
 }

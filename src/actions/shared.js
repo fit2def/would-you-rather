@@ -1,6 +1,6 @@
-import { getInitialData } from '../utils/api'
-import { receiveUsers } from './users.js'
-import { receiveQuestions } from './questions.js'
+import { getInitialData } from '../utils/api';
+import { receiveUsers } from './users';
+import { receiveQuestions } from './questions';
 
 export function getInitialDataAsync() {
   return (dispatch) => {
@@ -8,6 +8,6 @@ export function getInitialDataAsync() {
       .then(({users, questions}) => {
         dispatch(receiveUsers(users))
         dispatch(receiveQuestions(questions))
-      })
-  }
+      });
+  };
 }

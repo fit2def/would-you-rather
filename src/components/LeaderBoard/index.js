@@ -1,14 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
 import ScoreCard from '../ScoreCard';
 import './LeaderBoard.css';
 
 class LeaderBoard extends Component {
-
-  componentDidMount() {
-    !this.props.authedUser && this.props.history.push('/login');
-  }
 
   render() {
     return (
@@ -48,4 +43,4 @@ function mapStateToProps({ authedUser, users, questions }){
   }
 }
 
-export default withRouter(connect(mapStateToProps)(LeaderBoard));
+export default connect(mapStateToProps)(LeaderBoard);

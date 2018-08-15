@@ -12,9 +12,9 @@ export default function Asks({ asker }) {
 
       <div className='would-you-rather-block no-padding-right'>
         <p>
-          <span className='asks-statement'>{asker.name}</span> asks:
+          <span className='asks-statement padding-left'>{asker.name}</span> asks:
         </p>
-        <h2 className='would-you-rather-lg'>WOULD YOU RATHER...</h2>
+        <h2 className='would-you-rather-lg padding-left-sm'>WOULD YOU RATHER...</h2>
       </div>
 
     </div>

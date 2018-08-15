@@ -2,7 +2,6 @@ import React from 'react';
 import Avatar from '../Avatar';
 
 export default function ScoreCard({ profile }){
-  console.log(profile);
   const { user, answered, asked } = profile;
   return (
     <div className='ScoreCard'>

@@ -8,11 +8,7 @@ class NewQuestion extends Component {
   state = {
     optionOneText: '',
     optionTwoText: ''
-  }
-
-  componentDidMount() {
-    !this.props.authedUser && this.props.history.push('/login');
-  }
+  };
 
   changeOption(option, text){
     this.setState((prevState) => ({
@@ -26,7 +22,7 @@ class NewQuestion extends Component {
     const question = {
       ...this.state,
       author: this.props.authedUser
-    }
+    };
     this.props.dispatch(addQuestionAsync(question));
     this.props.history.push('/');
   }
@@ -57,7 +53,7 @@ class NewQuestion extends Component {
 function mapStateToProps({ authedUser }){
   return {
     authedUser
-  }
+  };
 }
 
 export default withRouter(connect(mapStateToProps)(NewQuestion));

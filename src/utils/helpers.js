@@ -31,7 +31,7 @@ function computeWidths(v1, v2) {
 }
 
 function formatRatio(votes, votesOther){
-  return `${votes} out of ${votes + votesOther}`;
+  return `${votes} out of ${votes + votesOther} votes`;
 }
 
 export function truncateText(text) {

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
 import ToggleButton from '../ToggleButton'
 import QuestionPreview from '../QuestionPreview'
 import './Home.css';
@@ -10,10 +9,6 @@ class Home extends Component {
   state = {
     showAnswered: false
   };
-
-  componentDidMount() {
-    !this.props.authedUser && this.props.history.push('/login');
-  }
 
   toggleShown() {
     this.setState(({ showAnswered }) => ({
@@ -77,4 +72,4 @@ function mapStateToProps({ authedUser, questions }) {
   };
 }
 
-export default withRouter(connect(mapStateToProps)(Home));
+export default connect(mapStateToProps)(Home);

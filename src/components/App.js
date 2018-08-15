@@ -12,27 +12,26 @@ import ErrorPage from './ErrorPage';
 
 class App extends Component {
 
-  componentDidMount(){
+  componentDidMount() {
     this.props.dispatch(getInitialDataAsync());
   }
 
   render() {
     return (
       <BrowserRouter>
-        <div className='App'>
-
-          { this.props.authedUser && <Nav /> }
-
-          <Switch>
-            <Route path='/' exact component={Home} />
-            <Route path='/login' component={Login} />
-            <Route path='/questions/:question_id' component={Question} />
-            <Route path='/new' component={NewQuestion} />
-            <Route path='/leaders' component={LeaderBoard} />
-            <Route component={ErrorPage} />
-          </Switch>
-
-        </div>
+        {!this.props.authedUser
+          ? <Login />
+          : (<div className='App'>
+            <Nav />
+            <Switch>
+              <Route path='/' exact component={Home} />
+              <Route path='/questions/:question_id' component={Question} />
+              <Route path='/new' component={NewQuestion} />
+              <Route path='/leaders' component={LeaderBoard} />
+              <Route component={ErrorPage} />
+            </Switch>)
+            </div>
+          )}
       </BrowserRouter>
     );
   }

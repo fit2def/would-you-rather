@@ -30,7 +30,7 @@ function QuestionPreview({ question, user}) {
       </div>
 
     </div>
-  )
+  );
 }
 
 function mapStateToProps({users}, {question}) {

@@ -9,7 +9,7 @@ function Logout({ dispatch, history }){
     <a className='Logout'
       onClick={() => {
         dispatch(logout());
-        history.push('/login');
+        history.push('/');
       }}>LOGOUT</a>
   );
 }

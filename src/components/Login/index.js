@@ -9,7 +9,7 @@ class Login extends Component {
 
   state = {
     selectedUser : null
-  }
+  };
 
   setSelectedUser(id){
     this.setState(() => ({
@@ -20,7 +20,7 @@ class Login extends Component {
   submit(e){
     e.preventDefault();
     this.props.dispatch(login(this.state.selectedUser));
-    this.props.history.goBack();
+    this.props.history.location === '/logout' && this.history.push('/');
   }
 
   render() {

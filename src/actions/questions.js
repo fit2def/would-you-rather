@@ -1,4 +1,4 @@
-import { _saveQuestionAnswer, _saveQuestion, generateUID } from '../utils/_DATA';
+import { _saveQuestionAnswer, _saveQuestion } from '../utils/_DATA';
 
 export const RECEIVE_QUESTIONS = 'RECEIVE_QUESTIONS';
 export const ANSWER_QUESTION = 'ANSWER_QUESTION';
@@ -9,9 +9,9 @@ export function receiveQuestions (questions) {
     type: RECEIVE_QUESTIONS,
     questions
   };
-}
+};
 
-export function answerQuestionAsync(authedUser, question, answer){
+export function answerQuestionAsync(authedUser, question, answer) {
   return (dispatch) => {
 
     const saved = {
@@ -22,7 +22,7 @@ export function answerQuestionAsync(authedUser, question, answer){
       ...question,
       [answer]: {
         ...question[answer],
-        votes: question[answer].votes.concat([authedUser])
+        votes: [...question[answer].votes, authedUser]
       }
     };
 
@@ -38,8 +38,8 @@ export function answerQuestionAsync(authedUser, question, answer){
         .catch(() => {
           dispatch(answerQuestion(saved))
         })
-  }
-}
+  };
+};
 
 function answerQuestion(question) {
   return {
@@ -56,13 +56,13 @@ export function addQuestionAsync(question) {
       })
       .catch(() => {
         alert('There was a problem adding that question. Please try again.')
-      })
-  }
-}
+      });
+  };
+};
 
 function addQuestion(question){
   return {
     type: ADD_QUESTION,
     question
-  }
+  };
 }

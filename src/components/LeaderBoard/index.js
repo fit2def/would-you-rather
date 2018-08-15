@@ -1,22 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import ScoreCard from '../ScoreCard';
 import './LeaderBoard.css';
 
-class LeaderBoard extends Component {
-
-  render() {
+function LeaderBoard ({ sortedUsers }){
     return (
       <div className="LeaderBoard">
-        {this.props.sortedUsers.map(su =>
+        {sortedUsers.map(su =>
           (<ScoreCard key={su.user.id} profile={su} />
         ))}
       </div>
     );
-  }
 }
 
-function mapStateToProps({ authedUser, users, questions }){
+function mapStateToProps({ users, questions }){
 
   const usersIter = Object.entries(users);
   const questionsIter = Object.entries(questions);
@@ -38,9 +35,8 @@ function mapStateToProps({ authedUser, users, questions }){
         u2.asked + u2.answered - (u1.asked + u1.answered))
 
   return {
-    authedUser,
     sortedUsers
-  }
+  };
 }
 
 export default connect(mapStateToProps)(LeaderBoard);

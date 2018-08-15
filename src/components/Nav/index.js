@@ -35,16 +35,16 @@ function Nav({ history }) {
 
           <li className="nav-item">
             <NavLink
-              to='/new'
-              className={path === '/new' ? 'active-link' : 'non-active-link'}>
+              to='/add'
+              className={path === '/add' ? 'active-link' : 'non-active-link'}>
               NEW QUESTION
             </NavLink>
           </li>
 
           <li className="nav-item">
             <NavLink
-              to='/leaders'
-              className={path === '/leaders' ? 'active-link' : 'non-active-link'}>
+              to='/leaderboard'
+              className={path === '/leaderboard' ? 'active-link' : 'non-active-link'}>
               LEADERBOARD
             </NavLink>
           </li>
